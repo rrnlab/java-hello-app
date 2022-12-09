@@ -10,5 +10,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/rrnlab/java-hello-app.git'
             }
         }
+        stage('unit test'){
+
+            steps{
+                sh 'mvn test'
+            }
+        }
     }
 }
