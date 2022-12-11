@@ -1,4 +1,4 @@
 FROM openjdk:11
 EXPOSE 8080
-ADD .mvn\wrapper\maven-wrapper.jar maven-wrapper.jar
-ENTRYPOINT ["java", "-jar", "/maven-wrapper.jar"]
+ADD C:\Projects\javaproj\src\main\java\com\example\springboothello\HelloWorldController.java HelloWorldController.java
+ENTRYPOINT ["java", "-jar", "HelloWorldController.java"]
