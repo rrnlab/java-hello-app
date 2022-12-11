@@ -28,5 +28,13 @@ pipeline {
                 sh 'mvn verify -DskipUnitTest'
             }
         }
+        stage('build docker image'){
+            
+            steps{
+                script{
+                    sh 'docker build -t test/spring-boot-hello-app .'
+                }
+            }
+        }
     }
 }
