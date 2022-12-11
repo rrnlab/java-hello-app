@@ -28,15 +28,5 @@ pipeline {
                 sh 'mvn verify -DskipUnitTest'
             }
         }
-        stage('static code analysis'){
-
-            steps{
-                script{
-                    withSonarQubeEnv(credentialsId: 'sonarid') {
-                        sh 'mvn clean package sonar:sonar'
-                }
-            }
-        }
-        }
     }
 }
