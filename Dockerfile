@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:11
 EXPOSE 8080
-ADD target/spring-boot-hello-app.jar spring-boot-hello-app.jar
-ENTRYPOINT ["java", "-jar", "/spring-boot-hello-app.jar"]
+ADD C:\Projects\javaproj\.mvn\wrapper\maven-wrapper.jar maven-wrapper.jar
+ENTRYPOINT ["java", "-jar", "/maven-wrapper.jar"]
