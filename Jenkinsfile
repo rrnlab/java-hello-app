@@ -32,7 +32,7 @@ pipeline {
             
             steps{
                 script{
-                    sh 'docker build -t test/spring-boot-hello-app .'
+                    sh 'docker build -t spring-boot-hello-app .'
                 }
             }
         }
