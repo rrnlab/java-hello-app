@@ -36,5 +36,16 @@ pipeline {
                 }
             }
         }
+        stage('push docker image'){
+
+            steps{
+                script{
+                    withCredentials([string(credentialsId: 'dockerhubid', variable: 'dockerhub')]) {
+                        sh 'docker login -u rajasekar215 -p ${dockerhub}'
+                    }
+                    sh 'docker push rajasekar215/spring-boot-hello-app'
+                }
+            }
+        }
     }
 }
